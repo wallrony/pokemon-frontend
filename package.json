@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "test:api": "NEXT_PUBLIC_BACKEND_API=https://pokeapi.co/api/v2/ jest",
-    "test:dev": "NEXT_PUBLIC_BACKEND_API=http://localhost:8080/ jest"
+    "test": "NEXT_PUBLIC_BACKEND_API=https://pokeapi.co/api/v2/ jest"
   },
   "dependencies": {
     "axios": "^0.21.1",

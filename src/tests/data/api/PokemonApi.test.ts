@@ -1,5 +1,4 @@
 import '@testing-library/jest-dom';
-import PokemonResponse from '../../../core/domain/response/PokemonResponse';
 import PokemonApi from '../../../data/api/implementation/PokemonApi';
 import PokemonApiMock from '../../../data/api/mock/PokemonApiMock';
 
