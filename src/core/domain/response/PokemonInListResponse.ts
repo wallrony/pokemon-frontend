@@ -1,6 +1,6 @@
-interface PokemonInList {
+interface PokemonInListResponse {
   url: string
   name: string
 }
 
-export default PokemonInList
+export default PokemonInListResponse

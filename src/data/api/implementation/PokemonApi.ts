@@ -4,13 +4,13 @@ import PokemonAbstractApi from "../abstraction/PokemonAbstractApi"
 import { apiGet } from './Client'
 
 class PokemonApi extends PokemonAbstractApi {
-  async fetch() {
+  async fetch(): Promise<PokemonInListResponse[]> {
     const response = await apiGet<PokemonInListResponse[]>('pokemon')
 
     return response['results']
   }
 
-  async fetchOne(id: number) {
+  async fetchOne(id: number): Promise<PokemonResponse> {
     const response = await apiGet<PokemonResponse>(`pokemon/${id}`)
 
     return response
