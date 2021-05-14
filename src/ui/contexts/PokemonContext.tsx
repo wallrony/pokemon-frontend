@@ -3,7 +3,7 @@ import PokemonInList from '../../core/domain/models/PokemonInList';
 import ServiceResponse from '../../core/domain/models/ServiceResponse';
 import PokemonService from '../../services/implementation/PokemonService';
 
-interface PokemonContextProps {
+export interface PokemonContextProps {
   data: PokemonInList[] | undefined;
   fetch: () => void;
 }
@@ -12,7 +12,7 @@ interface PokemonProviderProps {
   children: ReactNode;
 }
 
-const PokemonContext = createContext({} as PokemonContextProps);
+export const PokemonContext = createContext({} as PokemonContextProps);
 
 function PokemonProvider({ children }: PokemonProviderProps) {
   const [data, setData] = useState<PokemonInList[]>(undefined)
@@ -41,8 +41,3 @@ function PokemonProvider({ children }: PokemonProviderProps) {
 }
 
 export default PokemonProvider
-
-export {
-  PokemonContext
-}
-
