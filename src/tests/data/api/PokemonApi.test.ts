@@ -15,8 +15,6 @@ describe('PokemonApi', () => {
   });
 
   it('Must return a pokemon in list response with url and name', async () => {
-    process.env.NEXT_PUBLIC_BACKEND_API = 'https://pokeapi.co/api/v2/'
-
     const response = await new PokemonApi().fetch()
 
     const pokemon = response[0]
@@ -30,8 +28,6 @@ describe('PokemonApi', () => {
   })
 
   it('Must return a pokemon response with id, name, stats and types', async () => {
-    process.env.NEXT_PUBLIC_BACKEND_API = 'https://pokeapi.co/api/v2/'
-
     const response = await new PokemonApi().fetchOne(1)
 
     expect(response).not.toBeNull()
